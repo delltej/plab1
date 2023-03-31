@@ -1,57 +1,28 @@
-#given values
-cleaning_rate=60
-cavity_filling=200
-x_ray=100
-#when the bill of a patient is more than $200, give the user 5% discount
-disc1=0.05
-# more than $300, give a 10% discount
-disc2=0.1
-tax_rate=0.15
-#getting the inputs 
-name=input("enter the patient's name :")
-cleaning= input("was cleaning performed ?")
-cavity=input("was cavity filling performed ?")
-xray=input("was X ray  performed ?")
-#defining the function
-def calculate(name, cleaning, cavity, xray):
-    print("the patients name is :",name) 
-    total=0
-    # for cleaning
-    if(cleaning=="y"):
-        total=total+cleaning_rate
-        print("the cleaning was also done")
+def takeInput():
+    a = float(input("Enter number 1: "))
+    b = float(input("Enter number 2: "))
+    operator = input("Enter the operator (+, -, *, /): ")
+    return a, b, operator
+
+def displayResult():
+    a, b, operator = takeInput()
+    #for the addition of two number
+    if operator == "+":
+        result = a + b
+        print(f"{a} + {b} = {result}")
+        #for substraction of two number
+    elif operator == "-":
+        result = a - b
+        print(f"{a} - {b} = {result}")
+        #for multiplication of two numbers
+    elif operator == "*":
+        result = a * b
+        print(f"{a} * {b} = {result}")
+        #for division of two number
+    elif operator == "/":
+        result = a / b
+        print(f"{a} / {b} = {result}")
     else:
-        print("cleaning not done")
-        #for cavity
-    
-    if(cavity=="y"):
-        total=total+cavity_filling
-        print("the cavity filling was done")
-    else:
-        print("cavity feeling was not done ")
-        
-    if(xray=="y"):
-        total=total+x_ray
-        print("x ray was done")
-    else:
-        print(" x ray was not done ")
-        # print("the patients name is :",name)    
-    
-    #calculatinf tax
-    tax=total*tax_rate
-    total=total+tax
-    print("your total taxes are: ",tax)
-    
-    #for discount apply
-    if(total>200):
-        total=total-disc1
-        print("5 per discount was applied")
-      #for getting 10 percent discount
-    elif(total>300):
-        total=total-disc2
-        print("10 per discount was applied")
-        
-    print(" your total bill is :",total)
-  
-    
-calculate(name,cleaning,cavity,xray)
+        print("Invalid operator entered")
+
+displayResult()
