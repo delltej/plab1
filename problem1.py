@@ -35,4 +35,23 @@ def calculate(name, cleaning, cavity, xray):
         print("x ray was done")
     else:
         print(" x ray was not done ")
+        # print("the patients name is :",name)    
+    
+    #calculatinf tax
+    tax=total*tax_rate
+    total=total+tax
+    print("your total taxes are: ",tax)
+    
+    #for discount apply
+    if(total>200):
+        total=total-disc1
+        print("5 per discount was applied")
+      #for getting 10 percent discount
+    elif(total>300):
+        total=total-disc2
+        print("10 per discount was applied")
         
+    print(" your total bill is :",total)
+  
+    
+calculate(name,cleaning,cavity,xray)
