@@ -1,28 +1,23 @@
-def takeInput():
-    a = float(input("Enter number 1\n "))
-    b = float(input("Enter number 2\n "))
-    operator = input("Enter the operator (+, -, *, /): ")
-    return a, b, operator
+# variable define
+penny_value=1
+nikle_value=5
+dime_value=10
+quater_value=25
+pennies_in_dollar=100
 
-def displayResult():
-    a, b, operator = takeInput()
-    #for the addition of two number
-    if operator == "+":
-        result = a + b
-        print(f"{a} + {b} = {result}")
-        #for substraction of two number
-    elif operator == "-":
-        result = a - b
-        print(f"{a} - {b} = {result}")
-        #for multiplication of two numbers
-    elif operator == "*":
-        result = a * b
-        print(f"{a} * {b} = {result}")
-        #for division of two number
-    elif operator == "/":
-        result = a / b
-        print(f"{a} / {b} = {result}")
-    else:
-        print("Invalid operator entered")
+penny_value = int(input("please enter the value of pennies:"))
+nikle_value = int(input("please enter the value of nikles:"))
+dime_value = int(input("please enter the value of dimes:"))
+quater_value = int(input("please enter the value of quaters:"))
 
-displayResult()
+TotalMoney = penny_value + nikle_value + dime_value + quater_value
+
+if TotalMoney == 100:
+    print("congratulations! the amount you enter excatly one dollar! you win the game!")
+else:
+    if TotalMoney< 100:
+        print( "sorry,the amount you enter less than one dollar .")
+    elif TotalMoney < 100:
+              print("sorry,the amount you enter less than one dollar .")
+
+
