@@ -22,3 +22,17 @@ def calculate(name, cleaning, cavity, xray):
         print("the cleaning was also done")
     else:
         print("cleaning not done")
+        #for cavity
+    
+    if(cavity=="y"):
+        total=total+cavity_filling
+        print("the cavity filling was done")
+    else:
+        print("cavity feeling was not done ")
+        
+    if(xray=="y"):
+        total=total+x_ray
+        print("x ray was done")
+    else:
+        print(" x ray was not done ")
+        
