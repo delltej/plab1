@@ -12,3 +12,13 @@ name=input("enter the patient's name :")
 cleaning= input("was cleaning performed ?")
 cavity=input("was cavity filling performed ?")
 xray=input("was X ray  performed ?")
+#defining the function
+def calculate(name, cleaning, cavity, xray):
+    print("the patients name is :",name) 
+    total=0
+    # for cleaning
+    if(cleaning=="y"):
+        total=total+cleaning_rate
+        print("the cleaning was also done")
+    else:
+        print("cleaning not done")
